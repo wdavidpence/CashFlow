@@ -29,6 +29,7 @@ test('catalog keeps provenance and local-first storage', () => {
   for (const field of ['sourceUrl', 'sourceName', 'retrievedAt', 'status', 'history']) assert.match(catalog, new RegExp(field));
   assert.match(catalog, /localStorage/);
   assert.match(catalog, /STORE_VERSION=2/);
+  assert.match(catalog, /addEventListener\('input',render\);el\.addEventListener\('change',render\)/);
 });
 
 test('catalog validates and rejects unsupported records before saving', () => {
