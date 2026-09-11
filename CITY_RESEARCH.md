@@ -67,7 +67,18 @@ Use ClasificadosOnline, Zillow, Realtor.com, Point2, and Encuentra24 as discover
 
 CashFlow should provide city-specific buttons for competitor portals and a manual JSON/CSV import. “Every property” can only mean every matching property available from the enabled, terms-compliant source set and the user’s imports. It cannot honestly mean every listing across closed or protected portals. The app must show source coverage, last scan/import date, duplicates removed, and records requiring verification.
 
-## Planned catalog record
+## Listing-resource playbook
+
+The local resource brief adds a focused discovery layer for whole multi-tenant buildings, not just individual apartments:
+
+- **France — Lille and Strasbourg:** LeBonCoin, SeLoger, Bien'ici, LaBonnePierre (especially already-tenanted *biens occupés*), Notaires de France, PAP, and Logic-Immo.
+- **Portugal — Porto and Vila Nova de Gaia:** Idealista, Imovirtual, and Casa SAPO. Gaia is a deliberate adjacent search lane, not a currency or underwriting change.
+
+Recommended search phrases are preserved in the catalog: `immeuble de rapport`, `immeuble entier`, `immeuble loué`, `local commercial + appartements`, `prédio`, `prédio de rendimento`, `prédio arrendado`, and `loja + apartamentos`.
+
+Discovery workflow: create saved-search alerts on each applicable portal, capture the source URL and retrieval date in CashFlow, and request the current lease schedule, *taxe foncière* or IMI bill, and confirmation that units are separately registered. Cross-check French asking prices against notarial transaction data and Portuguese price-per-square-metre data. Treat rent-control, commercial-lease, cadastral, and *lots* questions as verification gates—not automated conclusions.
+
+These are discovery resources supplied by the user; CashFlow does not scrape them or claim complete live-market coverage.
 
 ```json
 {
