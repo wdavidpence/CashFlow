@@ -99,6 +99,8 @@ test('all three pages remain HTML documents with service-worker shell references
     assert.match(page, /manifest\.webmanifest/);
     assert.match(page, /serviceWorker/);
   }
-  assert.match(read('sw.js'), /cashflow-shell-v4/);});
+  assert.match(read('sw.js'), /cashflow-shell-v4/);
+  assert.match(read('sw.js'), /endsWith\('\/catalog\.html'\)/);
+  assert.match(read('sw.js'), /endsWith\('\/deal\.html'\)/);});
 
 process.stdout.write('REGRESSION_SUITE=PASS\n');
