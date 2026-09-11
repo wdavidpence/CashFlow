@@ -37,7 +37,8 @@ test('catalog validates and rejects unsupported records before saving', () => {
   assert.match(catalog, /price must be greater than zero/);
   assert.match(catalog, /at least one residential unit required/);
   assert.match(catalog, /missing source URL/);
-  assert.match(catalog, /rejected/);
+  assert.match(catalog, /function importPayload/);
+  assert.match(catalog, /CashFlow backup with version/);
 });
 
 test('catalog preserves workflow and underwriting payloads', () => {
