@@ -4,7 +4,7 @@ Phone-first, local-first real-estate deal intelligence for a small household eva
 
 ## Confirmed MVP decisions
 
-- **Initial regions:** Vigo, Spain and Porto, Portugal.
+- **Initial regions:** Porto, Portugal; Lille, France; and San Juan, Puerto Rico. Vigo is deferred, not an active target market.
 - **Target assets:** 3–12 residential units; mixed-use and ground-floor commercial opportunities are also discoverable and ranked separately.
 - **Strategy:** long-term residential rental first.
 - **User:** one household.

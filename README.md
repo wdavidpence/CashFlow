@@ -6,7 +6,7 @@ CashFlow is a phone-first, local-first HTML5 PWA for finding and analyzing multi
 
 ## Status
 
-Product definition complete; implementation begins with the protected local shell, deal model, and calculator vertical slice.
+Product definition now covers Porto, Lille, and San Juan; the calculator and local market catalog are available. The catalog supports clearly labeled sample fixtures, manual JSON imports, mixed-use filtering, provenance, change-history tracking, competitor research links, and side-by-side comparison.
 
 See [PRODUCT_BRIEF.md](PRODUCT_BRIEF.md) for the confirmed scope and model.
 

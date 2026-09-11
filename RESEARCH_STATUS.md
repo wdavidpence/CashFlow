@@ -37,6 +37,25 @@ Sources:
 
 - Current lender product sheets for American/non-EU non-residents in both countries.
 - Exact treatment of investment/rental and mixed-use properties.
-- Current acquisition taxes, notary/registry/legal costs, annual property taxes, rental rules, and local licensing constraints for Vigo and Porto.
+- Current acquisition taxes, notary/registry/legal costs, annual property taxes, rental rules, and local licensing constraints for Porto, Lille, and San Juan.
 - Compliant listing-source agreements or APIs and a server-side weekly scan architecture.
+
+## Expanded target markets: Porto, Lille, San Juan
+
+The active comparison set is now Porto, Portugal; Lille, France; and San Juan, Puerto Rico. The app must keep country/territory rules separate rather than applying one European assumption to all three.
+
+### Source map to integrate and cite
+
+- **Porto / Portugal housing and regulation:** Statistics Portugal (INE) for official housing and population statistics; Banco de Portugal for macroprudential LTV context; Portal das Finanças for IMT, IMI, and tax guidance; Câmara Municipal do Porto for local planning and housing policy; IPMA for climate normals; ANA/VINCI Airports for Porto airport access.
+- **Lille / France housing and regulation:** INSEE for demographic and housing statistics; Observatoires des loyers / ADIL Nord-Pas-de-Calais for rent-observatory and tenant-law context; Service-Public.fr and impots.gouv.fr for official tax/regulatory guidance; Métropole Européenne de Lille for planning and local housing rules; Météo-France for climate normals; Aéroport de Lille and SNCF/Eurostar sources for access.
+- **San Juan / Puerto Rico housing and regulation:** U.S. Census ACS and Puerto Rico Planning Board / Junta de Planificación for demographic and housing data; Puerto Rico Departamento de Hacienda for tax guidance; CRIM for property-tax records; Puerto Rico Office of the Commissioner of Financial Institutions for local finance oversight; HUD/FHA and lender disclosures for financing context; NOAA/NCEI for climate normals; Puerto Rico Ports Authority / SJU airport operator for access.
+- **Market listings / competitor discovery:** Porto: Idealista, Imovirtual, Casa Sapo, Properstar, Green-Acres. Lille: SeLoger, Leboncoin, Bien'ici, Logic-Immo, Properstar. San Juan: ClasificadosOnline, Zillow, Realtor.com, Point2, Encuentra24. These are discovery/comparable inputs, not automatically authoritative facts; every imported record must retain URL, source, retrieval time, and a manual-verification status.
+
+### Research rules for the comparison
+
+1. Record purchase price, unit count, residential area, commercial area, asking rent, occupancy, and source URL per listing.
+2. Keep lender LTV, regulator ceilings, historical documents, and user-specific written offers in separate statuses; never present a ceiling as available financing.
+3. Add September/October climate normals and airport route/access notes as travel-planning context, not investment returns.
+4. “Every property” means every matching record available from the enabled, terms-compliant source set and manual imports; the app must show source coverage and cannot claim portal-wide completeness.
+5. Competitor buttons should open the correct city and asset-type search in a new tab, while manual import remains the honest catalog path where no compliant API exists.
 - Written source citations and timestamps for every country-specific assumption shown in the UI.
