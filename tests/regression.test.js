@@ -44,6 +44,7 @@ test('catalog preserves workflow and underwriting payloads', () => {
   for (const field of ['pipelineStatus', 'followUpDate', 'nextAction', 'verificationChecklist', 'units', 'financeScenarios', 'assumptions', 'finance', 'calc']) {
     assert.match(catalog, new RegExp(field));
   }
+  assert.match(deal, /followUpDate:\$\('followUpDate'\)\.value,nextAction:\$\('nextAction'\)\.value\.trim\(\)/);
   for (const state of ['overdue', 'due-soon', 'unassigned']) assert.match(catalog, new RegExp(state));
 });
 
