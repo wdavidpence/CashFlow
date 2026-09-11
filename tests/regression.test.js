@@ -71,6 +71,9 @@ test('deal supports standalone packet and machine-readable export', () => {
   assert.match(deal, /Export decision packet/);
   assert.match(deal, /kind:'deal'/);
   assert.match(deal, /JSON.stringify/);
+  assert.match(deal, /function esc/);
+  assert.match(deal, /<!doctype html><html>/);
+  assert.match(deal, /financeScenarios/);
 });
 
 test('dynamic deal controls expose accessible names', () => {
