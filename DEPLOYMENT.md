@@ -6,29 +6,24 @@ The GitHub repository is private. The old public GitHub Pages site has been remo
 
 ## Authenticated staging deployment
 
-The repository contains a GitHub Actions workflow at `.github/workflows/deploy-staging.yml`. Once the two repository/environment secrets below are configured, every successful push to `main` deploys the static PWA to the Cloudflare Pages project `cashflow-staging`:
+The repository contains a manual Cloudflare Pages workflow at `.github/workflows/deploy-staging.yml`, but it is intentionally unused for now. No Cloudflare credentials are required for the current workflow.
 
-- `CLOUDFLARE_API_TOKEN` — a scoped Cloudflare API token allowed to deploy Pages
-- `CLOUDFLARE_ACCOUNT_ID` — the Cloudflare account ID
+## Online development: GitHub Codespaces
 
-After the first deployment, restrict the Cloudflare Pages hostname with Cloudflare Access:
+The repository includes `.devcontainer/devcontainer.json` configured for GitHub Codespaces. This is the current private online test method; Cloudflare is not required.
 
-1. Create an Access application for the staging hostname.
-2. Select GitHub or Google identity login.
-3. Allow only `david@pencetravel.com` (and optionally the GitHub account `wdavidpence`).
-4. Deny all other identities.
-5. Test in a private browser window before sharing the URL.
-
-Do not put Cloudflare tokens in the repository or in source files. Add them through GitHub repository **Settings → Secrets and variables → Actions**, preferably as environment secrets for the `staging` environment.
-
-Until these secrets exist, the staging job is intentionally skipped. The CI regression workflow still runs on every push.
-
-## Online development fallback
-
-Because the repository is private, GitHub Codespaces can provide an authenticated development URL without exposing the source. Start a Codespace from the repository, run:
+1. Open the private repository on GitHub.
+2. Select **Code → Codespaces → Create codespace on main**.
+3. In the Codespace terminal, run:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Forward port `4173` with visibility set to **Private**. The forwarded URL is then limited to authenticated GitHub users with repository/Codespace access.
+4. Open the forwarded **CashFlow app** port.
+
+Port `4173` is configured as **private**, so the forwarded URL requires an authenticated GitHub user with access to the repository/Codespace. This is a development/test instance, not a permanently running production host; Codespaces can stop when idle.
+
+## Optional future deployment
+
+The Cloudflare workflow remains manual and unused. It can be removed later or enabled if a protected always-on staging URL becomes necessary.

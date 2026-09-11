@@ -1,0 +1,19 @@
+{
+  "name": "CashFlow",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.13-bookworm",
+  "forwardPorts": [4173],
+  "portsAttributes": {
+    "4173": {
+      "label": "CashFlow app",
+      "onAutoForward": "openBrowser",
+      "visibility": "private"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
+    }
+  }
+}
